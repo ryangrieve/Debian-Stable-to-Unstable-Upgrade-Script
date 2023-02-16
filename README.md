@@ -1,1 +1,3 @@
 # Debian-Stable-to-Unstable-Upgrade-Script
+
+A script designed to upgrade a Debian Stable system to Debian Sid/Unstable to access the newest available software and function similar to a rolling release distribution. The script will update the sources list and comment out the stable sources in "/etc/apt/sources.list" that begin with "deb" or "deb-src" using the "sed" command. The script then adds two new lines to the file specifying the "sid" repositories as the new sources for packages and package sources, using the "echo" and "tee" commands. Finally, the script updates apt and upgrades the system to Debian Sid/Unstable including any dependencies that need to be installed or removed and reboots the system.
